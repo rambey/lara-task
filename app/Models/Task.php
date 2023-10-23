@@ -11,6 +11,9 @@ class Task extends Model
     protected $fillable = [
         'title' , 'description' , 'long_description'
     ];
-
+    
+    public function toogleComplete(){
+        $this->completed = !$this->completed ;
+        $this->save();
+    }
 }
-
